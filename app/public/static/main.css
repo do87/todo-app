@@ -1,0 +1,56 @@
+
+ul.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+ul.todo-list li:nth-child(n+2) {
+    background: #e9ecef;
+    margin-top: 5px;
+}
+ul.todo-list li input[type=text] {
+    width: 80%;
+    padding: 10px;
+    border: solid 1px #e9ecef;
+}
+ul.todo-list li:nth-child(n+2):hover {
+    background: #97b5d4;
+}
+
+ul.todo-list li:nth-child(n+2):hover button {
+    visibility: visible;
+}
+
+ul.todo-list li:first-child button {
+    visibility: visible;
+}
+
+input {
+    outline: none;
+}
+
+ul.todo-list li button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    visibility: hidden;
+}
+
+ul.todo-list li:nth-child(n+2) input[type=text] {
+    background: transparent;
+}
+ul.todo-list li:nth-child(n+2):hover input[type=text] {
+    border-color: transparent;
+}
+/* Editing function disabled for simplicity */
+/* ul.todo-list li:nth-child(n+2) input[type=text]:focus {
+    border-color: #e9ecef;
+    background: #fff;
+} */
+
+ul.todo-list li.done {
+    background: green !important;
+}
+ul.todo-list li.done input[type=text] {
+    border: solid 1px green;
+    color: #fff !important;
+}
