@@ -7,7 +7,7 @@
                     
                 <li class="<?php echo ($item["done"]=='1')?'done':'' ?>">
                     <input type="text" value="<?php echo htmlspecialchars($item["task"]); ?>" disabled>
-                    <button onclick="toggleItemStatus(<?php echo $item["id"]; ?>)">✅</button>
+                    <button onclick="toggleItemStatus(<?php echo $item["id"]; ?>)"><?php echo ($item["done"]=='1')?'👆':'✅' ?></button>
                     <button onclick="deleteItem(<?php echo $item["id"]; ?>)">✘</button>
                 </li><?php } ?>
 

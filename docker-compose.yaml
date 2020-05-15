@@ -1,6 +1,7 @@
 version: '3'
 services:
   nginx:
+    container_name: todo-app-nginx
     image: nginx:1.17.10-alpine
     ports:
       - 3000:80
@@ -8,6 +9,7 @@ services:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - ./app/public/static:/app/public/static
   app:
+    container_name: todo-app-php
     build: .
     ports:
       - "9000:9000"
@@ -18,7 +20,9 @@ services:
       DB_USER: todo_user
       DB_PASS: todo_pass
       DB_HOST: db
+      # LOGO_IMG: https://www.any.do/v4/images/og-image.png
   db:
+    container_name: todo-app-db
     image: mysql:8.0.19
     restart: always
     ports:

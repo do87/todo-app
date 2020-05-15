@@ -48,9 +48,15 @@ ul.todo-list li:nth-child(n+2):hover input[type=text] {
 } */
 
 ul.todo-list li.done {
-    background: green !important;
+    background: #1aad3c !important;
 }
 ul.todo-list li.done input[type=text] {
-    border: solid 1px green;
+    border: solid 1px #1aad3c;
     color: #fff !important;
+}
+
+.jumbotron {
+    background: transparent;
+    margin-top: 20px;
+    padding: 5px 50px 0 0;
 }

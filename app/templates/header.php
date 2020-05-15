@@ -14,6 +14,17 @@
     <body>
         <div class="container">
             <div class="jumbotron">
-                <h1 class="display-4">My to do's!</h1>
-                <p>The app is written in PHP & MySQL and is running on <?php echo $GLOBALS['server_name']; ?></p>
+                <?php 
+                    if (!empty($GLOBALS['logo_img'])) {
+                        echo "<img src=\"${GLOBALS['logo_img']}\" alt=\"logo\" height=\"150\" />";
+                    } else {
+                        echo '<h1 class="display-4">My to do\'s!</h1>';
+                    }
+                ?>
+                <p>The app is written in PHP & MySQL and is running in <?php
+                    if ($GLOBALS['running_in_docker']) {
+                        echo 'docker container ';
+                    }
+                    echo $GLOBALS['server_name']; 
+                ?></p>
             </div>
