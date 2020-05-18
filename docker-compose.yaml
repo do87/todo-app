@@ -19,6 +19,8 @@ services:
       DB_PASS: todo_pass
       DB_HOST: db
       # LOGO_IMG: 
+    volumes:
+      - ./app:/app
   db:
     container_name: todo-app-db
     image: mysql:8.0.19
