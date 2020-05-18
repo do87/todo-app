@@ -20,7 +20,7 @@ services:
       DB_USER: todo_user
       DB_PASS: todo_pass
       DB_HOST: db
-      # LOGO_IMG: https://www.any.do/v4/images/og-image.png
+      # LOGO_IMG: 
   db:
     container_name: todo-app-db
     image: mysql:8.0.19
