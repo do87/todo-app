@@ -10,11 +10,9 @@ services:
       - ./app/public/static:/app/public/static
   app:
     container_name: todo-app-php
-    build: .
+    build: ./app
     ports:
       - "9000:9000"
-    volumes:
-      - ./app:/app
     environment:
       DB_NAME: todo
       DB_USER: todo_user
